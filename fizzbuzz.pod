@@ -1,0 +1,32 @@
+=for comment
+This documentation is under the same attribution license
+as the software itself.  See LICENSE.md for details.
+
+=for aimake manualname fizzbuzz
+=for aimake manualsection 1
+
+=encoding utf8
+
+=head1 NAME
+
+fizzbuzz
+
+=head1 SYNOPSIS
+
+B<perl fizzbuzz.pl> [from I<number>] [to I<number>] [lang I<language>] [sep I<separator>] [use hyphens] [no wrap]
+
+=head1 DESCRIPTION
+
+This software counts, but it replaces multiples of certain numbers
+with particular words.
+
+=head1 AUTHOR
+
+The counting game concept, and the substitution of words for
+particular numbers, has been around for a long time, possibly since
+antiquity.
+
+The idea of writing a computer program to do it is also not new.
+
+This particular implementation was created by Nathan Eady.
+
