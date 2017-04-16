@@ -157,6 +157,19 @@ sub getoptions {
       $option{shift @ARGV} = 1;
     } elsif ($arg eq "no") {
       $option{shift @ARGV} = 0;
+    } elsif ($arg eq  "sub") {
+      my $word = shift @ARGV;
+      my $for  = shift @ARGV;
+      if ($for ne 'for') {
+        die "Incorrect options syntax: expected 'for' but got $for";
+      }
+      my $num = shift @ARGV;
+      if (not ($num =~ /^\d+$/)) {
+        # TODO: handle spelled-out numbers
+        die "Incorrect options syntax: expected a number to substitute $word for, but '$num' is not numeric.";
+      }
+      my ($n) = ($num =~ /(\d+)/);
+      push @{$option{subword}}, [ $n => $word ];
     }
     # TODO: handle other option syntax, and allow setting the subwords, colors, etc.
   }
