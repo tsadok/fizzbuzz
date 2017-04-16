@@ -57,12 +57,16 @@ my %langsupport =
           return donumber(int($n / 1000), $thoulvl + 1) . " " . ($thousand[$thoulvl] || "Xillion")
             . ($smalln ? " " : "") . $smalln;
         }
-        if ($n > 100) {
+        if ($n >= 100) {
+          return donumber(int($n / 100), 0) . " Hundred"
+            if not ($n % 100);
           my $smalln = donumber($n % 100, 0);
           return donumber(int($n / 100), 0) . " Hundred" . ($smalln ? ($opt{American} ? " " : " and ") : "") . $smalln;
         }
         if ($special{$n}) { return $special{$n} }
-        if ($n > 10) {
+        if ($n >= 10) {
+          return $ten[int($n / 10)]
+            if not ($n % 10);
           my $smalln = donumber($n % 10, 0);
           return $ten[int($n / 10)] . ($smalln ? ($opt{hyphens} ? "-" : " ") : "") . $smalln;
         }
