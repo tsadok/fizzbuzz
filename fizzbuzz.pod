@@ -24,9 +24,12 @@ with particular words.
 
 To install, create a build directory (this doesn't have to be inside
 the source tree, but it can be; it should be empty, initially), change
-to the build directory, and run aimake from the source directory.
+to the build directory, and run aimake from the source directory,
+specifying your preferred install location (e.g., -i /usr/local or
+wherever) and any other options you need.  aimake will build and
+install the documentation and the software.
 
-aimake will build and install the documentation and the software.
+For help with aimake options, run aimake --help
 
 =head1 AUTHOR
 
