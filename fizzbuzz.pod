@@ -13,12 +13,20 @@ fizzbuzz
 
 =head1 SYNOPSIS
 
-B<perl fizzbuzz.pl> [from I<number>] [to I<number>] [lang I<language>] [sep I<separator>] [use hyphens] [no wrap]
+B<fizzbuzz.pl> [from I<number>] [to I<number>] [lang I<language>] [sep I<separator>] [use hyphens] [no wrap]
 
 =head1 DESCRIPTION
 
 This software counts, but it replaces multiples of certain numbers
 with particular words.
+
+=head1 INSTALLATION
+
+To install, create a build directory (this doesn't have to be inside
+the source tree, but it can be; it should be empty, initially), change
+to the build directory, and run aimake from the source directory.
+
+aimake will build and install the documentation and the software.
 
 =head1 AUTHOR
 
