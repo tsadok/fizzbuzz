@@ -14,6 +14,7 @@ fizzbuzz
 =head1 SYNOPSIS
 
 B<fizzbuzz.pl> [from I<number>] [to I<number>] [lang I<language>] [sep I<separator>] [use hyphens] [no wrap]
+
 B<fizzbuzz.pl> [sub I<word> for I<number>] [...]
 
 =head1 DESCRIPTION
